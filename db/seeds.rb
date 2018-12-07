@@ -149,7 +149,25 @@ Review.destroy_all
 prod1.reviews.create!({
   user_id: 1,
   description: 'Okay shirt!',
+  rating: 4
+})
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: 'Meh shirt!',
   rating: 3
+})
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: 'So-so shirt!',
+  rating: 3
+})
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: 'terrible shirt!',
+  rating: 1
 })
 
 prod2.reviews.create!({
