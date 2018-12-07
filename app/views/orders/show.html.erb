@@ -2,7 +2,34 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
+    <h2>Order placed by <%= @order.email %></h2>
   </header>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th colspan="2">Product</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <%= render 'line_item', product: product["product_info"], price_paid_cents: product["price_paid_cents"], total_price_paid_cents: product["total_price_paid_cents"], quantity: product["quantity_ordered"].to_i %>
+      <% end %>
+    </tbody>
+    <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL:
+          </th>
+          <th>
+            <%= @order.total_cents / 100.0 %>
+          </th>
+        </tr>
+      </tfoot>
+  </table>
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>

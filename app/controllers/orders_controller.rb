@@ -2,6 +2,17 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @products = []
+    @order.line_items.each do |item|
+      product_data = Product.find item.product_id
+      product_info = {
+        "quantity_ordered" => item.quantity,
+        "price_paid_cents" => item.item_price_cents,
+        "total_price_paid_cents" => item.total_price_cents,
+        "product_info" => product_data
+      } 
+      @products.push product_info
+    end
   end
 
   def create
@@ -53,6 +64,7 @@ class OrdersController < ApplicationController
       )
     end
     order.save!
+    UserMailer.order_confirmation(order: order, cart: enhanced_cart).deliver_now
     order
   end
 

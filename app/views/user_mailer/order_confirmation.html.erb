@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for placing an order with jungle.com</h1>
+    <h2>Total: <%= humanized_money_with_symbol @order.total_cents / 100 %></h2>
+    <table>
+        <% @cart.each do |item| %>
+          <tr><%= item[:product].name %></tr>
+        <% end %>
+    </table>
+  </body>
+</html>
