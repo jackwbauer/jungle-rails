@@ -25,6 +25,12 @@
         </dl>
       </div>
     </div>
+    
+    <%= form_tag(product_reviews_path @product, method: :post) do %>
+      <%= text_field_tag :description %>
+      <%= select_tag :rating, options_for_select([1, 2, 3, 4, 5], 5) %>
+      <%= submit_tag "Submit" %>
+    <% end %>
 
     <table class="table">
       <thead>
