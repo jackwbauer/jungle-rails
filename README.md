@@ -4,11 +4,11 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Final Product
 
-![Product List] (https://github.com/jackwbauer/jungle-rails/blob/master/docs/Product_index.png)
-![Product Page] (https://github.com/jackwbauer/jungle-rails/blob/master/docs/Product_show.png)
-![Registration] (https://github.com/jackwbauer/jungle-rails/blob/master/docs/Register.png)
-![Order Confirmation] (https://github.com/jackwbauer/jungle-rails/blob/master/docs/Order-confirmation.png)
-![Cart] (https://github.com/jackwbauer/jungle-rails/blob/master/docs/Cart.png)
+![Product List](https://github.com/jackwbauer/jungle-rails/blob/master/docs/Product_index.png)
+![Product Page](https://github.com/jackwbauer/jungle-rails/blob/master/docs/Product_show.png)
+![Registration](https://github.com/jackwbauer/jungle-rails/blob/master/docs/Register.png)
+![Order Confirmation](https://github.com/jackwbauer/jungle-rails/blob/master/docs/Order-confirmation.png)
+![Cart](https://github.com/jackwbauer/jungle-rails/blob/master/docs/Cart.png)
 
 ## Setup
 
