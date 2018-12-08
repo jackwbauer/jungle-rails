@@ -1,10 +1,10 @@
 <tr>
     <td><%= review.description %></td>
-    <td><%= review.rating %></td>
+    <td><%= "#{review.rating}/5" %></td>
     <td><%= review.user.first_name %></td>
     <td><%= review.created_at.strftime("%m/%d/%Y %H:%M:%S") %></td>
     <td>
-        <% if current_user.id == review.user_id %>
+        <% if session[:user_id] == review.user_id %>
             <%= button_to 'delete', product_review_url(:product_id => review.product_id, :id => review.id), :method => :delete %>
         <% end %>
     </td>
