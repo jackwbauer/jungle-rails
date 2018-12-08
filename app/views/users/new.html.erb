@@ -9,7 +9,7 @@
       <%= form_for @user do |f| %>
         <% if f.object.errors.any? %>
           <div class="alert alert-danger">
-            <strong>The following errors prevented saving:</strong>
+            <strong>The following errors prevented registration:</strong>
             <ul>
               <% f.object.errors.full_messages.each do |error| %>
                 <li><%= error %></li>
